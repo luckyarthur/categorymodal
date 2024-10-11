@@ -1,0 +1,20 @@
+.showButton {
+    padding: 20px;
+    background-color: var(--background);
+    border-radius: 5px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    border: 2px solid;
+    border-color: var(--foreground);
+    min-width: 100px;
+  }
+  
+  .showButton:hover {
+    box-shadow: 5px 5px 0px var(--foreground);
+    transform: translate(-2px, -2px);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .showButton {
+      border-color: darkgray;
+    }
+  }

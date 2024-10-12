@@ -7,18 +7,17 @@ import FocusLock from 'react-focus-lock';
 
 import VisuallyHidden from '../VisuallyHidden';
 import styles from './ModalContainer.module.css';
-import clsx from 'clsx';
 
 interface ModalProp {
   title: string;
-  handleDismiss: () => {};
+  handleDismiss: () => void;
 }
 
 function ModalContainer({ title, children, handleDismiss }: React.PropsWithChildren<ModalProp>) {
   const dialogRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
-    function handleKeyDown(event: KeyboardEvent): any {
+    function handleKeyDown(event: KeyboardEvent): void {
       if (event.code === 'Escape') {
       handleDismiss();
       }

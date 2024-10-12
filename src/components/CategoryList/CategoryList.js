@@ -53,7 +53,7 @@ function CategoryList() {
     data = [first].concat(subListDic[lastKey]);
   }
 
-  function handleBackward(event) {
+  function handleBackward() {
     const newRecord = record.slice(0, -1);
     setRecord(newRecord);
   }

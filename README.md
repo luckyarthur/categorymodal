@@ -17,6 +17,9 @@ to reproduce the issue, you need to reduce the home page width into smaller size
 2. using createPortal function and pass 'document.body' as the parameter to ensure that the modal component will always show up at the top level, which is easier and better than using the z-index.
 3. using an animation to slide in the modal when presenting it is a better user experience.
 
+## examples to show solution
+click this link [show example](https://categorymodal.vercel.app/)
+
 ## things to know
 I use both javascript and typescript to make this example to show how the modal should behave, so I just make a simple Category to show its functionality, if you need to use it like a fully coded category, just update the 'subListDic' inside the constants file with key-value pairs in it, the 'key' is the menu item name and 'value' is an Array that contains the subitems, very easy to set up.
 

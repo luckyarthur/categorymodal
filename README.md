@@ -9,7 +9,7 @@ to reproduce the issue, you need to reduce the home page width into smaller size
 
 2. the grey area doesn't support click event to dismiss the modal.
 
-3. the keyboard navigation with 'tab' key select the component behind the modal, which should only focus inside the Modal(you can see the blue rectangle with the focus at the left arrow behind).
+3. the keyboard navigation with 'tab' key select the component behind the modal(you can see the blue rectangle with the focus at the left arrow behind), which should only focus inside the Modal.
 <img width="878" alt="image" src="https://github.com/user-attachments/assets/e2e58079-e1d4-4b90-9f54-0531d1c74836">
 
 ## more improvements

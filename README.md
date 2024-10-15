@@ -1,4 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# here are all the issues I find on gumroad category feature
+to reproduce the issue, you need to reduce the home page width into smaller size like the snap below, just tap on the top right button, you will see the modal.
+<img width="886" alt="image" src="https://github.com/user-attachments/assets/67647ca9-ffcf-49d9-a8c2-7afab626355b">
+
+## issues
+
+1. the X button is black which is not good to find it, it should be white color in light theme:
+<img width="890" alt="image" src="https://github.com/user-attachments/assets/0a575ec4-fd02-4075-940e-16ca1596e6c4">
+
+2. the grey area doesn't support click event to dismiss the modal.
+
+3. the keyboard navigation with 'tab' key select the component behind the modal, which should only focus inside the Modal(you can see the blue rectangle).
+<img width="878" alt="image" src="https://github.com/user-attachments/assets/e2e58079-e1d4-4b90-9f54-0531d1c74836">
+
+## more improvements
+1. when show this modal on small screen like mobile phone, the modal should oocupy the whole screen to offer a better user experience.
+2. using createPortal function and pass 'document.body' as the parameter to ensure that the modal component will always show up at the top level, which is easier and better than using the z-index.
+3. using an animation to slide in the modal when presenting it is a better user experience.
+
+## things to know
+I use both javascript and typescript to make this example to show how the modal should behave, so I just make a simple Category to show its functionality, if you need to use it like a fully coded category, just update the 'subListDic' inside the constants file with key-value pairs in it, the 'key' is the menu item name and 'value' is an Array that contains the subitems, very easy to set up.
+
+if you just want to use the modal to present your own content, use the ModalContainer component to do it.
+
+## ToDo
+abstract the ModalContainer to be a reusable component for more scenarios
+
 
 ## Getting Started
 
@@ -13,24 +39,3 @@ pnpm dev
 # or
 bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

@@ -17,7 +17,7 @@ to reproduce the issue, you need to reduce the home page width into smaller size
 2. using createPortal function and pass 'document.body' as the parameter to ensure that the modal component will always show up at the top level, which is easier and better than using the z-index.
 3. using an animation to slide in the modal when presenting it is a better user experience.
 
-## examples to show solution
+## online examples to show solution
 click this link [show example](https://categorymodal.vercel.app/)
 
 ## things to know
